@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"> 
+    
+</head>
+<body>
+    <section class="top-section">  <!-- just title for now -->
+       <div class="inner-title">
+          <h1> Weather Application </h1>
+       </div>
+    </section>
+
+    <section class="middle-section"> <!-- Most important section-->
+        <div class="inner-dynamic">
+           <p class="location"> {{country}} </p> <!-- This will show the location -->
+           <div class="inside-circle">
+                <p class="inside-number">{{temprature}} C</p> <!-- This will show the temprature -->
+           </div>
+           <div class="inner-input">
+             <form method="post"> 
+                 <input type="text" placeholder="Enter Location or country" name="search-weather" />
+             </form>
+           </div>
+        </div>
+    </section>
+
+    <section class="bottom-section"> 
+        <!-- Work on this once we know the api we are working with... -->
+        <div class="weather-data">
+             <label class="data-info">Sky: {{skyInfo}}</label>
+             <label class="data-description">{{skyDescript}}</label>
+        </div>
+        <div class="weather-data">
+            <label class="data-info"> Wind Speed: {{windSpeed}}</label>
+        </div>
+        <div class="heat-data">
+            <label class="data-info">Humidity: {{humidity}} </label>
+        </div>
+    </section>
+</body>
+</html>
