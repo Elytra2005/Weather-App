@@ -22,7 +22,7 @@ def weather():
     convert = ""
     shorten = ""
     #http://api.openweathermap.org/data/2.5/weather?appid=2b27032bb3515f3c1c0ef746f2b9d54d&q=london
-    if request.method == "POST":
+    if request.method == "GET":
         #variable data 
         stuff = open("stuff.txt", "r").read()
         location = request.form.get('search-weather')
